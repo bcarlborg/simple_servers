@@ -8,7 +8,7 @@ server_socket = socket(AF_INET, SOCK_DGRAM)
 server_socket.bind(('', server_port))
 print("This server socket is bound and ready to go!")
 
-while true:
+while True:
     message, client_addr = server_socket.recvfrom(2048)
     modified_message = message.upper()
     serverSocket.sendto(modified_message, client_addr)
